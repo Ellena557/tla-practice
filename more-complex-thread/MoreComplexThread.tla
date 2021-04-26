@@ -354,7 +354,7 @@ Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 (* The following formula asserts that no two processes are in the        *)
 (* critcal sections at the same time.                                    *)
 (***************************************************************************)
-\* MutualExclusion == {pc[0], pc[1]} # {"T0_step5", "T1_step6"}
+MutualExclusion == {pc[0], pc[1]} # {"T0_step5", "T1_step6"}
 
 
 =============================================================================
