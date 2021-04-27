@@ -1,0 +1,595 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 10 and seed 317015601451737712 with 4 workers on 8 cores with 1205MB heap and 2711MB offheap memory [pid: 9524] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file C:\Users\Elena\.tlaplus\CondVar\ConditionVariable.toolbox\Model_1\MC.tla
+Parsing file C:\Users\Elena\.tlaplus\CondVar\ConditionVariable.toolbox\Model_1\ConditionVariable.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Integers.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module ConditionVariable
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-04-27 20:03:46)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-04-27 20:03:47.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant PositiveSize is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step1")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <T2_step1 line 187, col 13 to line 189, col 47 of module ConditionVariable>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step2")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <T0_step1 line 103, col 13 to line 105, col 47 of module ConditionVariable>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step2" @@ 1 :> "T1_step1" @@ 2 :> "T2_step2")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <T0_step2 line 107, col 13 to line 111, col 34 of module ConditionVariable>
+/\ mutex = "t0"
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step1" @@ 2 :> "T2_step2")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <T0_step3 line 113, col 13 to line 119, col 34 of module ConditionVariable>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step4_1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step2")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <T2_step2 line 191, col 13 to line 195, col 34 of module ConditionVariable>
+/\ mutex = "t2"
+/\ pc = (0 :> "T0_step4_1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step3")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <T2_step3 line 197, col 13 to line 200, col 29 of module ConditionVariable>
+/\ mutex = "t2"
+/\ pc = (0 :> "T0_step4_1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step4")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <T2_step4 line 202, col 13 to line 205, col 34 of module ConditionVariable>
+/\ mutex = "wakeup"
+/\ pc = (0 :> "T0_step4_1" @@ 1 :> "T1_step1" @@ 2 :> "T2_step5")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <T0_step4_1 line 121, col 15 to line 124, col 49 of module ConditionVariable>
+/\ mutex = "wakeup"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step1" @@ 2 :> "T2_step5")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <T1_step1 line 145, col 13 to line 147, col 47 of module ConditionVariable>
+/\ mutex = "wakeup"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step2" @@ 2 :> "T2_step5")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <T2_step5 line 207, col 13 to line 210, col 34 of module ConditionVariable>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step2" @@ 2 :> "T2_step1")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <T1_step2 line 149, col 13 to line 153, col 34 of module ConditionVariable>
+/\ mutex = "t1"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step3" @@ 2 :> "T2_step1")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <T1_step3 line 155, col 13 to line 161, col 34 of module ConditionVariable>
+/\ mutex = "t1"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step5" @@ 2 :> "T2_step1")
+/\ queueSize = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <T1_step5 line 174, col 13 to line 177, col 29 of module ConditionVariable>
+/\ mutex = "t1"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step6" @@ 2 :> "T2_step1")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <T1_step6 line 179, col 13 to line 182, col 34 of module ConditionVariable>
+/\ mutex = "free"
+/\ pc = (0 :> "T0_step4_2" @@ 1 :> "T1_step1" @@ 2 :> "T2_step1")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <T0_step4_2 line 126, col 15 to line 130, col 36 of module ConditionVariable>
+/\ mutex = "t0"
+/\ pc = (0 :> "T0_step5" @@ 1 :> "T1_step1" @@ 2 :> "T2_step1")
+/\ queueSize = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <T0_step5 line 132, col 13 to line 135, col 29 of module ConditionVariable>
+/\ mutex = "t0"
+/\ pc = (0 :> "T0_step6" @@ 1 :> "T1_step1" @@ 2 :> "T2_step1")
+/\ queueSize = -1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-04-27 20:03:47
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 96, col 1 to line 96, col 4 of module ConditionVariable>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 9 to line 101, col 66 of module ConditionVariable: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step1 line 103, col 1 to line 103, col 8 of module ConditionVariable>: 4:66
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 16 to line 103, col 33 of module ConditionVariable: 340
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 103, col 16 to line 103, col 20 of module ConditionVariable: 274
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 104, col 16 to line 104, col 50 of module ConditionVariable: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 105, col 16 to line 105, col 47 of module ConditionVariable: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step2 line 107, col 1 to line 107, col 8 of module ConditionVariable>: 13:23
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 107, col 16 to line 107, col 33 of module ConditionVariable: 296
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 107, col 16 to line 107, col 20 of module ConditionVariable: 273
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 108, col 17 to line 108, col 30 of module ConditionVariable: 85
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 108, col 17 to line 108, col 21 of module ConditionVariable: 62
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 109, col 16 to line 109, col 28 of module ConditionVariable: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 110, col 16 to line 110, col 50 of module ConditionVariable: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 111, col 16 to line 111, col 34 of module ConditionVariable: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step3 line 113, col 1 to line 113, col 8 of module ConditionVariable>: 13:20
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 16 to line 113, col 33 of module ConditionVariable: 292
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 113, col 16 to line 113, col 20 of module ConditionVariable: 272
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 20 to line 114, col 32 of module ConditionVariable: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 115, col 24 to line 116, col 63 of module ConditionVariable: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 117, col 24 to line 118, col 40 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 119, col 16 to line 119, col 34 of module ConditionVariable: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step4_1 line 121, col 1 to line 121, col 10 of module ConditionVariable>: 3:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 121, col 18 to line 121, col 37 of module ConditionVariable: 280
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 121, col 18 to line 121, col 22 of module ConditionVariable: 271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 19 to line 122, col 34 of module ConditionVariable: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 122, col 19 to line 122, col 23 of module ConditionVariable: 55
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 123, col 18 to line 123, col 54 of module ConditionVariable: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 124, col 18 to line 124, col 49 of module ConditionVariable: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step4_2 line 126, col 1 to line 126, col 10 of module ConditionVariable>: 4:17
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 126, col 18 to line 126, col 37 of module ConditionVariable: 287
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 126, col 18 to line 126, col 22 of module ConditionVariable: 270
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 127, col 19 to line 127, col 32 of module ConditionVariable: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 127, col 19 to line 127, col 23 of module ConditionVariable: 44
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 128, col 18 to line 128, col 30 of module ConditionVariable: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 129, col 18 to line 129, col 52 of module ConditionVariable: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 130, col 18 to line 130, col 36 of module ConditionVariable: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step5 line 132, col 1 to line 132, col 8 of module ConditionVariable>: 8:16
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 132, col 16 to line 132, col 33 of module ConditionVariable: 282
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 132, col 16 to line 132, col 20 of module ConditionVariable: 269
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 133, col 16 to line 133, col 41 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 133, col 29 to line 133, col 41 of module ConditionVariable: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 134, col 16 to line 134, col 50 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 134, col 22 to line 134, col 50 of module ConditionVariable: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 16 to line 135, col 29 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 135, col 25 to line 135, col 29 of module ConditionVariable: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step6 line 137, col 1 to line 137, col 8 of module ConditionVariable>: 2:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 137, col 16 to line 137, col 33 of module ConditionVariable: 276
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 137, col 16 to line 137, col 20 of module ConditionVariable: 265
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 138, col 16 to line 138, col 30 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 139, col 16 to line 139, col 50 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 140, col 16 to line 140, col 34 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step1 line 145, col 1 to line 145, col 8 of module ConditionVariable>: 21:72
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 145, col 16 to line 145, col 33 of module ConditionVariable: 337
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 145, col 16 to line 145, col 20 of module ConditionVariable: 265
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 146, col 16 to line 146, col 50 of module ConditionVariable: 72
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 147, col 16 to line 147, col 47 of module ConditionVariable: 72
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step2 line 149, col 1 to line 149, col 8 of module ConditionVariable>: 16:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 149, col 16 to line 149, col 33 of module ConditionVariable: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 149, col 16 to line 149, col 20 of module ConditionVariable: 264
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 150, col 17 to line 150, col 30 of module ConditionVariable: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 150, col 17 to line 150, col 21 of module ConditionVariable: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 151, col 16 to line 151, col 28 of module ConditionVariable: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 152, col 16 to line 152, col 50 of module ConditionVariable: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 153, col 16 to line 153, col 34 of module ConditionVariable: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step3 line 155, col 1 to line 155, col 8 of module ConditionVariable>: 15:20
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 155, col 16 to line 155, col 33 of module ConditionVariable: 283
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 155, col 16 to line 155, col 20 of module ConditionVariable: 263
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 156, col 20 to line 156, col 32 of module ConditionVariable: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 157, col 24 to line 158, col 63 of module ConditionVariable: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 159, col 24 to line 160, col 40 of module ConditionVariable: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 161, col 16 to line 161, col 34 of module ConditionVariable: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step4_1 line 163, col 1 to line 163, col 10 of module ConditionVariable>: 5:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 163, col 18 to line 163, col 37 of module ConditionVariable: 270
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 163, col 18 to line 163, col 22 of module ConditionVariable: 262
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 164, col 19 to line 164, col 34 of module ConditionVariable: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 164, col 19 to line 164, col 23 of module ConditionVariable: 50
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 165, col 18 to line 165, col 54 of module ConditionVariable: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 166, col 18 to line 166, col 49 of module ConditionVariable: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step4_2 line 168, col 1 to line 168, col 10 of module ConditionVariable>: 3:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 168, col 18 to line 168, col 37 of module ConditionVariable: 275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 168, col 18 to line 168, col 22 of module ConditionVariable: 262
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 169, col 19 to line 169, col 32 of module ConditionVariable: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 169, col 19 to line 169, col 23 of module ConditionVariable: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 170, col 18 to line 170, col 30 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 171, col 18 to line 171, col 52 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 172, col 18 to line 172, col 36 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step5 line 174, col 1 to line 174, col 8 of module ConditionVariable>: 11:14
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 174, col 16 to line 174, col 33 of module ConditionVariable: 275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 174, col 16 to line 174, col 20 of module ConditionVariable: 262
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 175, col 16 to line 175, col 41 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 175, col 29 to line 175, col 41 of module ConditionVariable: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 176, col 16 to line 176, col 50 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 176, col 22 to line 176, col 50 of module ConditionVariable: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 177, col 16 to line 177, col 29 of module ConditionVariable: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 177, col 25 to line 177, col 29 of module ConditionVariable: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step6 line 179, col 1 to line 179, col 8 of module ConditionVariable>: 2:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 179, col 16 to line 179, col 33 of module ConditionVariable: 271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 179, col 16 to line 179, col 20 of module ConditionVariable: 260
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 180, col 16 to line 180, col 30 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 181, col 16 to line 181, col 50 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 182, col 16 to line 182, col 34 of module ConditionVariable: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T2_step1 line 187, col 1 to line 187, col 8 of module ConditionVariable>: 58:87
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 187, col 16 to line 187, col 33 of module ConditionVariable: 346
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 187, col 16 to line 187, col 20 of module ConditionVariable: 259
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 188, col 16 to line 188, col 50 of module ConditionVariable: 87
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 189, col 16 to line 189, col 47 of module ConditionVariable: 87
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T2_step2 line 191, col 1 to line 191, col 8 of module ConditionVariable>: 32:38
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 191, col 16 to line 191, col 33 of module ConditionVariable: 296
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 191, col 16 to line 191, col 20 of module ConditionVariable: 258
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 192, col 17 to line 192, col 30 of module ConditionVariable: 115
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 192, col 17 to line 192, col 21 of module ConditionVariable: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 193, col 16 to line 193, col 28 of module ConditionVariable: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 194, col 16 to line 194, col 50 of module ConditionVariable: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 195, col 16 to line 195, col 34 of module ConditionVariable: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T2_step3 line 197, col 1 to line 197, col 8 of module ConditionVariable>: 29:32
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 197, col 16 to line 197, col 33 of module ConditionVariable: 289
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 197, col 16 to line 197, col 20 of module ConditionVariable: 257
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 198, col 16 to line 198, col 41 of module ConditionVariable: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 199, col 16 to line 199, col 50 of module ConditionVariable: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 200, col 16 to line 200, col 29 of module ConditionVariable: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T2_step4 line 202, col 1 to line 202, col 8 of module ConditionVariable>: 27:30
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 202, col 16 to line 202, col 33 of module ConditionVariable: 286
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 202, col 16 to line 202, col 20 of module ConditionVariable: 256
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 203, col 16 to line 203, col 32 of module ConditionVariable: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 204, col 16 to line 204, col 50 of module ConditionVariable: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 205, col 16 to line 205, col 34 of module ConditionVariable: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T2_step5 line 207, col 1 to line 207, col 8 of module ConditionVariable>: 30:33
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 207, col 16 to line 207, col 33 of module ConditionVariable: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 207, col 16 to line 207, col 20 of module ConditionVariable: 255
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 208, col 16 to line 208, col 30 of module ConditionVariable: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 209, col 16 to line 209, col 50 of module ConditionVariable: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 210, col 16 to line 210, col 34 of module ConditionVariable: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 215, col 1 to line 215, col 11 of module ConditionVariable>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 215, col 19 to line 215, col 56 of module ConditionVariable: 254
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 216, col 19 to line 216, col 32 of module ConditionVariable: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<PositiveSize line 227, col 1 to line 227, col 12 of module ConditionVariable>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 227, col 17 to line 227, col 30 of module ConditionVariable: 297
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(18) at 2021-04-27 20:03:47: 523 states generated (18 745 s/min), 297 distinct states found (10 645 ds/min), 35 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+523 states generated, 297 distinct states found, 35 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 18.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 3 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1680ms at (2021-04-27 20:03:47)
+@!@!@ENDMSG 2186 @!@!@

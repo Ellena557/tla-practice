@@ -228,5 +228,5 @@ PositiveSize == queueSize >= 0
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Apr 27 18:35:46 MSK 2021 by Elena
+\* Last modified Tue Apr 27 14:35:46 MSK 2021 by Elena
 \* Created Mon Apr 26 05:01:12 MSK 2021 by Elena
