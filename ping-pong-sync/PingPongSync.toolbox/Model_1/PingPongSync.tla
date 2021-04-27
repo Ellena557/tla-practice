@@ -1,11 +1,11 @@
---------------------------- MODULE PingPong ---------------------------
+--------------------------- MODULE PingPongSync ---------------------------
 
 EXTENDS Integers, TLC, Sequences
 
 (* --algorithm xp
 variables
-  turn = TRUE;
-  counter = 100;
+  turn = 0;
+  counter = 1000;
 
 process Ping = 0
 begin
@@ -14,7 +14,7 @@ Ping_step1:  while (counter > 0) do
   
 \* while(turn)
 \*Ping_step2:    while (turn) do
-Ping_step2:      await turn;
+Ping_step2:      await (turn = 0);
 
 \* critical section
 Ping_step3:      skip;
@@ -23,7 +23,7 @@ Ping_step3:      skip;
 Ping_step4:      counter := counter - 1;
 
 \* change flag
-Ping_step5:      turn := FALSE;
+Ping_step5:      turn := 1;
 
     end while;
 end process;
@@ -34,7 +34,7 @@ Pong_step1:  while (counter > 0) do
   
 \* while(turn)
 \* Pong_step2:    while (~turn) do
-Pong_step2:      await ~turn;
+Pong_step2:      await (turn = 1);
 
 \* critical section
 Pong_step3:      skip;
@@ -43,16 +43,14 @@ Pong_step3:      skip;
 Pong_step4:      counter := counter - 1;
 
 \* change flag
-Pong_step5:      turn := TRUE;
+Pong_step5:      turn := 0;
 
     end while;
 end process;
 
 
 end algorithm; *)
-
-
-\* BEGIN TRANSLATION (chksum(pcal) = "51f1d7f1" /\ chksum(tla) = "e87cc135")
+\* BEGIN TRANSLATION (chksum(pcal) = "95612b2e" /\ chksum(tla) = "cc5ec11c")
 VARIABLES turn, counter, pc
 
 vars == << turn, counter, pc >>
@@ -60,8 +58,8 @@ vars == << turn, counter, pc >>
 ProcSet == {0} \cup {1}
 
 Init == (* Global variables *)
-        /\ turn = TRUE
-        /\ counter = 100
+        /\ turn = 0
+        /\ counter = 1000
         /\ pc = [self \in ProcSet |-> CASE self = 0 -> "Ping_step1"
                                         [] self = 1 -> "Pong_step1"]
 
@@ -72,7 +70,7 @@ Ping_step1 == /\ pc[0] = "Ping_step1"
               /\ UNCHANGED << turn, counter >>
 
 Ping_step2 == /\ pc[0] = "Ping_step2"
-              /\ turn
+              /\ (turn = 0)
               /\ pc' = [pc EXCEPT ![0] = "Ping_step3"]
               /\ UNCHANGED << turn, counter >>
 
@@ -87,7 +85,7 @@ Ping_step4 == /\ pc[0] = "Ping_step4"
               /\ turn' = turn
 
 Ping_step5 == /\ pc[0] = "Ping_step5"
-              /\ turn' = FALSE
+              /\ turn' = 1
               /\ pc' = [pc EXCEPT ![0] = "Ping_step1"]
               /\ UNCHANGED counter
 
@@ -100,7 +98,7 @@ Pong_step1 == /\ pc[1] = "Pong_step1"
               /\ UNCHANGED << turn, counter >>
 
 Pong_step2 == /\ pc[1] = "Pong_step2"
-              /\ ~turn
+              /\ (turn = 1)
               /\ pc' = [pc EXCEPT ![1] = "Pong_step3"]
               /\ UNCHANGED << turn, counter >>
 
@@ -115,7 +113,7 @@ Pong_step4 == /\ pc[1] = "Pong_step4"
               /\ turn' = turn
 
 Pong_step5 == /\ pc[1] = "Pong_step5"
-              /\ turn' = TRUE
+              /\ turn' = 0
               /\ pc' = [pc EXCEPT ![1] = "Pong_step1"]
               /\ UNCHANGED counter
 
@@ -137,6 +135,7 @@ Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 
 
 
+
 (***************************************************************************)
 (* The following formula asserts that no two processes are in the        *)
 (* critcal sections at the same time.                                    *)
@@ -147,12 +146,11 @@ MutualExclusion == {pc[0], pc[1]} # {"Ping_step3", "Pong_step3"}
 (***************************************************************************)
 (* The following formula asserts that counter is not negative              *)
 (***************************************************************************)
-TypeOK == counter >= 0
-
+TypeOK == counter >= -1
 
 
 
 =============================================================================
 \* Modification History
-\* Last modified Mon Apr 26 18:16:10 MSK 2021 by Elena
-\* Created Mon Apr 26 00:07:15 MSK 2021 by Elena
+\* Last modified Tue Apr 27 20:13:17 MSK 2021 by Elena
+\* Created Mon Apr 26 23:17:12 MSK 2021 by Elena
