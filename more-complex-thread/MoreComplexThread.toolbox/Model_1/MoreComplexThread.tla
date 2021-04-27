@@ -139,6 +139,8 @@ T1_step11:     mutex1 := mutex1 - 1;
 end process;
 
 end algorithm; *)
+
+
 \* BEGIN TRANSLATION (chksum(pcal) = "a6e25d6d" /\ chksum(tla) = "774e2555")
 VARIABLES mutex1, mutex2, mutex3, flag, holder1, holder2, holder3, pc
 
@@ -348,24 +350,18 @@ Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 
 
 
-
-
-
-
 (***************************************************************************)
 (* The following formula asserts that no two processes are in the        *)
 (* critcal sections at the same time.                                    *)
 (***************************************************************************)
-\* MutualExclusion == {pc[0], pc[1]} # {"T0_step5", "T1_step6"}
+MutualExclusion == {pc[0], pc[1]} # {"T0_step5", "T1_step6"}
 
-
-(***************************************************************************)
-(* The following formula asserts that mutex value is not negative          *)
-(***************************************************************************)
-
+TypeOK == /\ mutex1 >= 0 /\ holder1 >= 0 /\ holder1 <= 2
+         /\ mutex2 >= 0 /\ holder2 >= 0 /\ holder2 <= 2
+         /\ mutex3 >= 0 /\ holder3 >= 0 /\ holder3 <= 2 
 
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Apr 27 01:09:44 MSK 2021 by Elena
+\* Last modified Tue Apr 27 19:57:58 MSK 2021 by Elena
 \* Created Mon Apr 26 01:02:40 MSK 2021 by Elena
