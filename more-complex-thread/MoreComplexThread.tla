@@ -356,10 +356,6 @@ Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 (***************************************************************************)
 MutualExclusion == {pc[0], pc[1]} # {"T0_step5", "T1_step6"}
 
-TypeOK == /\ mutex1 >= 0 /\ holder1 >= 0 /\ holder1 <= 2
-         /\ mutex2 >= 0 /\ holder2 >= 0 /\ holder2 <= 2
-         /\ mutex3 >= 0 /\ holder3 >= 0 /\ holder3 <= 2 
-
 
 =============================================================================
 \* Modification History
