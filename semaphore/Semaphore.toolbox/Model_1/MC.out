@@ -1,0 +1,317 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 122 and seed 4707856694818470871 with 4 workers on 8 cores with 1205MB heap and 2711MB offheap memory [pid: 15280] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file C:\Users\Elena\.tlaplus\Semaphore\Semaphore.toolbox\Model_1\MC.tla
+Parsing file C:\Users\Elena\.tlaplus\Semaphore\Semaphore.toolbox\Model_1\Semaphore.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Integers.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file D:\Downloads\TLAToolbox-1.7.1-win32.win32.x86_64\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Semaphore
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-04-27 20:17:22)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-04-27 20:17:23.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant MutualExclusion is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step1" @@ 1 :> "T1_step1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <T0_step1 line 64, col 13 to line 66, col 34 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step2" @@ 1 :> "T1_step1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <T1_step1 line 84, col 13 to line 86, col 34 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step2" @@ 1 :> "T1_step2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <T1_step2 line 88, col 13 to line 94, col 45 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step2" @@ 1 :> "T1_step5")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <T1_step5 line 105, col 13 to line 107, col 50 of module Semaphore>
+/\ semaphore = 1
+/\ pc = (0 :> "T0_step2" @@ 1 :> "T1_step1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <T0_step2 line 68, col 13 to line 71, col 50 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <T1_step1 line 84, col 13 to line 86, col 34 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <T1_step2 line 88, col 13 to line 94, col 45 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step5")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <T1_step5 line 105, col 13 to line 107, col 50 of module Semaphore>
+/\ semaphore = 1
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <T1_step1 line 84, col 13 to line 86, col 34 of module Semaphore>
+/\ semaphore = 1
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <T1_step2 line 88, col 13 to line 94, col 45 of module Semaphore>
+/\ semaphore = 0
+/\ pc = (0 :> "T0_step3" @@ 1 :> "T1_step3")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-04-27 20:17:23
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 59, col 1 to line 59, col 4 of module Semaphore>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 9 to line 62, col 66 of module Semaphore: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step1 line 64, col 1 to line 64, col 8 of module Semaphore>: 2:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 16 to line 64, col 33 of module Semaphore: 60
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 64, col 16 to line 64, col 20 of module Semaphore: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 16 to line 65, col 50 of module Semaphore: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 16 to line 66, col 34 of module Semaphore: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step2 line 68, col 1 to line 68, col 8 of module Semaphore>: 2:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 16 to line 68, col 33 of module Semaphore: 54
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 16 to line 68, col 20 of module Semaphore: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 17 to line 69, col 30 of module Semaphore: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 69, col 17 to line 69, col 25 of module Semaphore: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 16 to line 70, col 41 of module Semaphore: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 16 to line 71, col 50 of module Semaphore: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step3 line 73, col 1 to line 73, col 8 of module Semaphore>: 1:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 16 to line 73, col 33 of module Semaphore: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 73, col 16 to line 73, col 20 of module Semaphore: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 16 to line 74, col 19 of module Semaphore: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 16 to line 75, col 50 of module Semaphore: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 16 to line 76, col 34 of module Semaphore: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T0_step4 line 78, col 1 to line 78, col 8 of module Semaphore>: 3:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 16 to line 78, col 33 of module Semaphore: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 78, col 16 to line 78, col 20 of module Semaphore: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 16 to line 79, col 41 of module Semaphore: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 16 to line 80, col 50 of module Semaphore: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step1 line 84, col 1 to line 84, col 8 of module Semaphore>: 9:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 16 to line 84, col 33 of module Semaphore: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 16 to line 84, col 20 of module Semaphore: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 16 to line 85, col 50 of module Semaphore: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 16 to line 86, col 34 of module Semaphore: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step2 line 88, col 1 to line 88, col 8 of module Semaphore>: 9:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 16 to line 88, col 33 of module Semaphore: 54
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 88, col 16 to line 88, col 20 of module Semaphore: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 20 to line 89, col 33 of module Semaphore: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 28 to line 90, col 41 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 90, col 28 to line 90, col 36 of module Semaphore: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 27 to line 91, col 52 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 91, col 40 to line 91, col 52 of module Semaphore: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 27 to line 92, col 61 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 33 to line 92, col 61 of module Semaphore: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 27 to line 93, col 61 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 94, col 27 to line 94, col 45 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step3 line 96, col 1 to line 96, col 8 of module Semaphore>: 5:5
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 16 to line 96, col 33 of module Semaphore: 43
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 96, col 16 to line 96, col 20 of module Semaphore: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 16 to line 97, col 19 of module Semaphore: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 98, col 16 to line 98, col 50 of module Semaphore: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 99, col 16 to line 99, col 34 of module Semaphore: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step4 line 101, col 1 to line 101, col 8 of module Semaphore>: 0:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 16 to line 101, col 33 of module Semaphore: 44
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 101, col 16 to line 101, col 20 of module Semaphore: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 102, col 16 to line 102, col 41 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 16 to line 103, col 50 of module Semaphore: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<T1_step5 line 105, col 1 to line 105, col 8 of module Semaphore>: 6:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 105, col 16 to line 105, col 33 of module Semaphore: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 105, col 16 to line 105, col 20 of module Semaphore: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 106, col 16 to line 106, col 41 of module Semaphore: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 107, col 16 to line 107, col 50 of module Semaphore: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 112, col 1 to line 112, col 11 of module Semaphore>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 112, col 19 to line 112, col 56 of module Semaphore: 36
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 19 to line 113, col 32 of module Semaphore: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<MutualExclusion line 128, col 1 to line 128, col 15 of module Semaphore>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 128, col 20 to line 128, col 60 of module Semaphore: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(16) at 2021-04-27 20:17:23: 70 states generated (4 225 s/min), 38 distinct states found (2 293 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+70 states generated, 38 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 16.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1009ms at (2021-04-27 20:17:23)
+@!@!@ENDMSG 2186 @!@!@
